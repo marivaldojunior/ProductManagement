@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProductManagement.Application.DTOs;
 using ProductManagement.Application.Products.Commands.CreateProduct;
@@ -12,6 +13,7 @@ namespace ProductManagement.Api.Controllers;
 [ApiController]
 [Route("api/[controller]")]
 [Produces("application/json")]
+[Authorize] // Requer autenticação JWT
 public class ProductsController : ControllerBase
 {
     private readonly IMediator _mediator;
