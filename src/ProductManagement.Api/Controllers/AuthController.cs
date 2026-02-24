@@ -21,7 +21,7 @@ public class AuthController : ControllerBase
     }
 
     /// <summary>
-    /// Registra um novo usuário
+    /// Registra um novo usuário no sistema
     /// </summary>
     [HttpPost("register")]
     [AllowAnonymous]
